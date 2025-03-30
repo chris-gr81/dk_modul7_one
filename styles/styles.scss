@@ -1,0 +1,94 @@
+$borderColor: #d4b89c;
+$cardColor: #f5e8dc;
+$bodyColor: #fdfdfd;
+$headerColor: #a96d3a;
+$textColor: #4a3f35;
+$textUnvalid: #c75c4a;
+
+body {
+  background-color: $bodyColor;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: $textColor;
+
+  &__header {
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 3px solid $headerColor;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $textColor;
+    border: none;
+    padding: 1rem;
+    width: fit-content;
+    font-size: 0.8rem;
+    background-color: $borderColor;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  border: 1px solid $borderColor;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding-bottom: 1rem;
+
+  &__image {
+    background-color: $cardColor;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid $borderColor;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__header {
+    color: $headerColor;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+
+  &__text {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  &__price {
+    font-weight: bold;
+
+    &--unvalid {
+      color: $textUnvalid;
+      text-decoration: line-through;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__header,
+  &__text,
+  &__price {
+    padding: 0 0.5rem;
+  }
+}
