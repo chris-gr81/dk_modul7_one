@@ -33,6 +33,10 @@ body {
   border-radius: 5px;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+.articles__button:hover {
+  background-color: rgb(227.4436619718, 209.5, 191.5563380282);
 }
 
 .card {
